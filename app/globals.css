@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+/* 2. Custom Variables must be wrapped in @layer base */
+@layer base {
+  :root {
+    --font-sans: var(--font-body);
+    --font-serif:var(--font-header);
+    --font-mono:var(--font-code);
+
+    /* Typography and Surfaces */
+    --color-text-dark: 26 26 26;
+    --color-background-dark: 24 35 50;
+    --color-background-light: 245 247 255;
+
+    /* Base CSS variables for your palette (RGB components are correct) */
+    --color-success: 59 178 115;
+    --color-warning: 244 169 64;
+    --color-error: 222 99 99;
+    --color-accent: 181 162 241;
+
+    /* Primary and Grays */
+    --color-primary-light: 168 200 235;
+    --color-primary-dark: 31 79 121;
+    --color-primary: 79 144 214;
+    --color-gray-light: 217 217 217;
+    --background: var(--color-background-light); 
+    --foreground: var(--color-text-dark);
+
+  }
+}
+
+/* 3. Dark Mode variables (using a media query is fine) */
+@media (prefers-color-scheme: dark) {
+  @layer base {
+    :root {
+      /* Define dark mode versions using RGB components */
+      --background: var(--color-background-dark);
+      --foreground: var(--color-background-light);
+    }
+  }
+}
+
