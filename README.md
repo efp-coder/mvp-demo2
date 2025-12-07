@@ -15,7 +15,7 @@ The aim is to create a tech education app for Python, the app should contain fre
 * CSS: Tailwind
 * Video provider/embedder: Vimeo
 * Backend: Supabase
-* E2E: Playright
+* E2E: Playwright
 
 
 ## Getting Started
